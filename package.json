@@ -1,0 +1,16 @@
+{
+  "name": "newprot-monorepo",
+  "private": true,
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "apps/*",
+    "apps/services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@apps/web",
+    "build": "npm run build --workspace=@apps/web",
+    "lint": "npm run lint --workspace=@apps/web",
+    "typecheck": "npm run typecheck --workspace=@apps/web"
+  }
+}
