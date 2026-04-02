@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
+import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { navItems, siteConfig } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
@@ -105,16 +106,20 @@ export function SiteNavbar() {
         <div className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-zinc-300">
           {siteConfig.country}
         </div>
+        <ThemeToggle />
       </div>
 
-      <button
-        type="button"
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-200 lg:hidden"
-        aria-label="Toggle navigation"
-        onClick={() => setOpen((value) => !value)}
-      >
-        {open ? <X size={18} /> : <Menu size={18} />}
-      </button>
+      <div className="flex items-center gap-2 lg:hidden">
+        <ThemeToggle />
+        <button
+          type="button"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-200"
+          aria-label="Toggle navigation"
+          onClick={() => setOpen((value) => !value)}
+        >
+          {open ? <X size={18} /> : <Menu size={18} />}
+        </button>
+      </div>
 
       <AnimatePresence>
         {open ? (
