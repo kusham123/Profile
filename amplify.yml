@@ -6,17 +6,21 @@ applications:
       phases:
         preBuild:
           commands:
-            - npm ci
+            - npm install -g pnpm
+            - pnpm install --frozen-lockfile
         build:
           commands:
-            - npm run build --workspace=@apps/web
+            - pnpm build --filter=@apps/web
       artifacts:
-        baseDirectory: apps/web
+        baseDirectory: apps/web/out
         files:
-          - '.next/**/*'
-          - 'public/**/*'
-          - 'package.json'
+          - '**/*'
       cache:
         paths:
           - node_modules/**/*
           - apps/web/node_modules/**/*
+      customHeaders:
+        - pattern: '**'
+          headers:
+            - key: 'Cache-Control'
+              value: 'no-cache, no-store, must-revalidate'
