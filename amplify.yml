@@ -6,12 +6,12 @@ applications:
       phases:
         preBuild:
           commands:
-            - echo "Installing dependencies at root level..."
-            - cd ../../ && npm ci --legacy-peer-deps
+            - echo "Installing root dependencies..."
+            - npm ci --legacy-peer-deps --prefix ../../
         build:
           commands:
             - echo "Building web app..."
-            - npm run build --workspace=@apps/web
+            - npm run build --workspace=@apps/web --prefix ../../
       artifacts:
         baseDirectory: apps/web/out
         files:
