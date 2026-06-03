@@ -6,14 +6,14 @@ applications:
       phases:
         preBuild:
           commands:
-            - echo "Installing root dependencies with lock file..."
-            - npm ci --legacy-peer-deps --prefix ../../
+            - echo "Installing dependencies from root..."
+            - npm install --prefix ../../
         build:
           commands:
             - echo "Building web app..."
-            - npm run build --workspace=@apps/web --prefix ../../
+            - npm run build
       artifacts:
-        baseDirectory: apps/web/out
+        baseDirectory: out
         files:
           - '**/*'
       cache:
