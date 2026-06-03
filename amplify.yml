@@ -7,7 +7,7 @@ applications:
         preBuild:
           commands:
             - echo "Installing dependencies at root level..."
-            - cd ../../ && npm install --legacy-peer-deps
+            - cd ../../ && npm ci --legacy-peer-deps
         build:
           commands:
             - echo "Building web app..."
