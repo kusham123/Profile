@@ -6,8 +6,8 @@ applications:
       phases:
         preBuild:
           commands:
-            - echo "Installing dependencies from root..."
-            - npm install --prefix ../../
+            - echo "Installing dependencies..."
+            - npm install --prefer-offline --no-audit --no-fund
         build:
           commands:
             - echo "Building web app..."
@@ -19,4 +19,3 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-          - apps/web/node_modules/**/*
