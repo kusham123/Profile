@@ -6,17 +6,14 @@ applications:
       phases:
         preBuild:
           commands:
-            - cd ../../
             - npm install
         build:
           commands:
-            - npm run build --workspace=@apps/web
+            - npm run build
       artifacts:
-        baseDirectory: apps/web/out
+        baseDirectory: out
         files:
           - '**/*'
       cache:
         paths:
           - node_modules/**/*
-          - apps/web/node_modules/**/*
-          - .turbo/**/*
