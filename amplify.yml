@@ -6,7 +6,7 @@ applications:
       phases:
         preBuild:
           commands:
-            - echo "Installing root dependencies..."
+            - echo "Installing root dependencies with lock file..."
             - npm ci --legacy-peer-deps --prefix ../../
         build:
           commands:
