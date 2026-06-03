@@ -6,14 +6,17 @@ applications:
       phases:
         preBuild:
           commands:
-            - npm install
+            - echo "Installing dependencies at root level..."
+            - cd ../../ && npm install --legacy-peer-deps
         build:
           commands:
-            - npm run build
+            - echo "Building web app..."
+            - npm run build --workspace=@apps/web
       artifacts:
-        baseDirectory: out
+        baseDirectory: apps/web/out
         files:
           - '**/*'
       cache:
         paths:
           - node_modules/**/*
+          - apps/web/node_modules/**/*
