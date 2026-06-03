@@ -1,19 +1,16 @@
 version: 1
 applications:
-  - appRoot: apps/web
+  - appRoot: .
     frontend:
-      buildPath: /
       phases:
         preBuild:
           commands:
-            - echo "Installing dependencies..."
-            - npm install --prefer-offline --no-audit --no-fund
+            - npm install
         build:
           commands:
-            - echo "Building web app..."
-            - npm run build
+            - npm run build --workspace=@apps/web
       artifacts:
-        baseDirectory: out
+        baseDirectory: apps/web/.next
         files:
           - '**/*'
       cache:
