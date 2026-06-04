@@ -16,7 +16,7 @@ export function HeroSection() {
             <div className="space-y-4">
               <h1 className="max-w-3xl text-5xl font-semibold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Hello, I&apos;m{" "}
-                <span className="bg-gradient-to-r from-rose-300 via-rose-500 to-red-400 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-rose-300 via-rose-500 to-red-400 bg-clip-text text-transparent">
                   {siteConfig.name}
                 </span>
               </h1>
@@ -30,7 +30,7 @@ export function HeroSection() {
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-rose-500 to-red-400 px-6 py-3 text-sm font-medium text-white shadow-[0_10px_35px_rgba(255,77,77,0.28)] transition duration-300 hover:translate-y-[-1px] hover:shadow-[0_16px_50px_rgba(255,77,77,0.35)]"
+              className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-rose-500 to-red-400 px-6 py-3 text-sm font-medium text-white shadow-[0_10px_35px_rgba(255,77,77,0.28)] transition duration-300 hover:-translate-y-px hover:shadow-[0_16px_50px_rgba(255,77,77,0.35)]"
             >
               Let&apos;s Work Together
             </a>
@@ -51,10 +51,10 @@ export function HeroSection() {
         </Reveal>
 
         <Reveal className="relative" delay={0.1}>
-          <div className="relative mx-auto max-w-[420px]">
+          <div className="relative mx-auto max-w-105">
             <div className="absolute inset-10 rounded-full bg-rose-500/15 blur-3xl" />
-            <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur-xl">
-              <div className="relative mx-auto flex h-72 w-72 items-center justify-center rounded-full border border-rose-400/30 bg-gradient-to-br from-zinc-900 via-zinc-950 to-black shadow-[0_0_50px_rgba(255,77,77,0.18)] sm:h-80 sm:w-80">
+            <div className="relative rounded-4xl border border-white/10 bg-white/5 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur-xl">
+              <div className="relative mx-auto flex h-72 w-72 items-center justify-center rounded-full border border-rose-400/30 bg-linear-to-br from-zinc-900 via-zinc-950 to-black shadow-[0_0_50px_rgba(255,77,77,0.18)] sm:h-80 sm:w-80">
                 <Image
                   src="/profile-placeholder.svg"
                   alt={`Portrait of ${siteConfig.name}`}

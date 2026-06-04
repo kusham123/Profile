@@ -29,7 +29,7 @@ export function PortfolioSection() {
                   fill
                   className="object-cover transition duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent opacity-70 transition duration-300 group-hover:opacity-85" />
+                <div className="absolute inset-0 bg-linear-to-t from-black via-black/35 to-transparent opacity-70 transition duration-300 group-hover:opacity-85" />
                 <div className="absolute inset-x-4 bottom-4 flex translate-y-3 gap-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                   <a
                     href={project.liveUrl}

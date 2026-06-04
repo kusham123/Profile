@@ -25,7 +25,7 @@ export function SectionHeading({
       <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
         {title}{" "}
         {accent ? (
-          <span className="bg-gradient-to-r from-rose-400 via-rose-500 to-red-300 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-rose-400 via-rose-500 to-red-300 bg-clip-text text-transparent">
             {accent}
           </span>
         ) : null}

@@ -9,9 +9,9 @@ export function AboutSection() {
     <section id="about" className="scroll-mt-28 py-24 sm:py-28">
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-[0_24px_70px_rgba(0,0,0,0.4)]">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,77,77,0.12),_transparent_55%)]" />
-            <div className="relative overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-zinc-900 via-zinc-950 to-black">
+          <div className="relative overflow-hidden rounded-4xl border border-white/10 bg-white/5 p-5 shadow-[0_24px_70px_rgba(0,0,0,0.4)]">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,77,77,0.12),transparent_55%)]" />
+            <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-zinc-900 via-zinc-950 to-black">
               <Image
                 src="/profile-workspace.svg"
                 alt="Developer workspace illustration"
@@ -44,7 +44,7 @@ export function AboutSection() {
                     </div>
                     <div className="h-2 rounded-full bg-white/5">
                       <div
-                        className="h-2 rounded-full bg-gradient-to-r from-rose-500 via-rose-400 to-red-300 shadow-[0_0_18px_rgba(255,77,77,0.3)]"
+                        className="h-2 rounded-full bg-linear-to-r from-rose-500 via-rose-400 to-red-300 shadow-[0_0_18px_rgba(255,77,77,0.3)]"
                         style={{ width: `${skill.value}%` }}
                       />
                     </div>
@@ -62,7 +62,7 @@ export function AboutSection() {
                   <div key={`${item.period}-${item.title}`} className="grid gap-4 sm:grid-cols-[140px_1fr]">
                     <div className="text-sm font-medium text-rose-300">{item.period}</div>
                     <div className="relative border-l border-white/10 pl-5">
-                      <span className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-rose-400 shadow-[0_0_14px_rgba(255,77,77,0.55)]" />
+                      <span className="absolute -left-1.25 top-1.5 h-2.5 w-2.5 rounded-full bg-rose-400 shadow-[0_0_14px_rgba(255,77,77,0.55)]" />
                       <h4 className="text-base font-semibold text-white">{item.title}</h4>
                       <p className="mt-1 text-sm text-zinc-500">{item.company}</p>
                       <p className="mt-3 leading-7 text-zinc-400">{item.description}</p>

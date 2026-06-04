@@ -70,7 +70,7 @@ export function SiteNavbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <a href="#home" className="flex items-center gap-3">
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-rose-500/80 to-zinc-700 text-sm font-semibold text-white shadow-[0_0_35px_rgba(255,77,77,0.18)]">
+        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-br from-rose-500/80 to-zinc-700 text-sm font-semibold text-white shadow-[0_0_35px_rgba(255,77,77,0.18)]">
           {initials}
         </span>
         <div className="hidden sm:block">
@@ -128,7 +128,7 @@ export function SiteNavbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25 }}
-            className="absolute left-0 right-0 top-[calc(100%+0.75rem)] rounded-[2rem] border border-white/10 bg-zinc-950/95 p-4 shadow-2xl backdrop-blur-xl lg:hidden"
+            className="absolute left-0 right-0 top-[calc(100%+0.75rem)] rounded-4xl border border-white/10 bg-zinc-950/95 p-4 shadow-2xl backdrop-blur-xl lg:hidden"
           >
             <nav className="grid gap-2">
               {navItems.map((item) => (

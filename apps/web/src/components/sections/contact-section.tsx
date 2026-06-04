@@ -49,7 +49,7 @@ export function ContactSection() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <form className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.35)]">
+          <form className="rounded-4xl border border-white/10 bg-white/5 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.35)]">
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="space-y-2">
                 <span className="text-sm text-zinc-300">Name</span>
@@ -73,12 +73,12 @@ export function ContactSection() {
               <textarea
                 rows={6}
                 placeholder="Tell me about your project, goals, and timeline."
-                className="w-full rounded-[1.5rem] border border-white/10 bg-black/30 px-4 py-3 text-white outline-none transition placeholder:text-zinc-600 focus:border-rose-400/35"
+                className="w-full rounded-3xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none transition placeholder:text-zinc-600 focus:border-rose-400/35"
               />
             </label>
             <button
               type="submit"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-rose-500 to-red-400 px-6 py-3 text-sm font-medium text-white shadow-[0_14px_30px_rgba(255,77,77,0.22)] transition hover:translate-y-[-1px]"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-linear-to-r from-rose-500 to-red-400 px-6 py-3 text-sm font-medium text-white shadow-[0_14px_30px_rgba(255,77,77,0.22)] transition hover:-translate-y-px"
             >
               <Send size={16} />
               Send Message
